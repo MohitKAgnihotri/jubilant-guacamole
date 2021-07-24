@@ -24,17 +24,17 @@ void Round_Robin::schedule(List<Tcb> &q, ofstream &outfile) {
 
         // iterate through the whole list
         while (running != NULL) {
-            if (running->getBurstTime() >= quantum) {
-                unsigned int burst_time = running->getBurstTime() - quantum;
-                running->setBurstTime(burst_time > 0 ? burst_time : 0);
+            if (running->getCpuTime() >= quantum) {
+                unsigned int new_cpu_time = running->getCpuTime() - quantum;
+                running->setCpuTime(new_cpu_time);
                 running->setTotalTaskCpuTime(running->getTotalTaskCpuTime() + quantum);
                 tick += quantum;
                 running = it.Next();
             } else {
 
-                tick += running->getBurstTime();
-                running->setTotalTaskCpuTime(running->getTotalTaskCpuTime() + running->getBurstTime() + running->getCpuTime());
-                running->setBurstTime(0);
+                tick += running->getCpuTime();
+                running->setTotalTaskCpuTime(running->getTotalTaskCpuTime() + running->getCpuTime());
+                running->setCpuTime(0);
 
                 /* task is finished    */
                 /* set turnaround time */
