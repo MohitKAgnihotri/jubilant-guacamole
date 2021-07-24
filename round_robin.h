@@ -34,7 +34,7 @@ public:
 	{
 
 		ListIterator <Tcb> ito(from);
-		Tcb* ptr = ito.First();
+		Tcb* ptr = ito.Next();
 		while (ptr)
 		{
 

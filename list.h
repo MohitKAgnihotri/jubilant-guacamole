@@ -248,17 +248,8 @@ T* ListIterator<T>::Next()
     {
         return 0;
     }
+    T* data = &current->data;
     current = current->next;
-    if (current != 0)
-    {
-        return &current->data;
-    }
-    else
-    {
-        return 0;
-    }
+    return data;
 }
-
-
-
 #endif
