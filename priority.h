@@ -28,19 +28,20 @@ public:
 	bool isDone() { return (done); }
 	bool isNotDone() { return (!done); }
 	bool isStarted() { return (started); }
-	bool isNotStarted() { return (!started); } 
+	bool isNotStarted() { return (!started); }
+    Tcb* getTcbWithPriority (List <Tcb> &priorityReadyQueue);
 
 	void copyQueue(List<Tcb>& from, List<Tcb>& to)
 	{
 
-		ListIterator <Tcb> ito(from);
-		Tcb* ptr = ito.First();
-		while (ptr)
-		{
+        ListIterator <Tcb> ito(from);
+        Tcb* ptr = ito.Next();
+        while (ptr)
+        {
 
-			to.InsertAtEnd(*ptr);
-			ptr = ito.Next();
-		}
+            to.InsertAtEnd(*ptr);
+            ptr = ito.Next();
+        }
 	}
 };
 
