@@ -27,13 +27,13 @@ void Round_Robin::schedule(List<Tcb> &q, ofstream &outfile) {
             if (running->getBurstTime() >= quantum) {
                 unsigned int burst_time = running->getBurstTime() - quantum;
                 running->setBurstTime(burst_time > 0 ? burst_time : 0);
-                running->setCpuTime(running->getCpuTime() + quantum);
+                running->setTotalTaskCpuTime(running->getTotalTaskCpuTime() + quantum);
                 tick += quantum;
                 running = it.Next();
             } else {
 
                 tick += running->getBurstTime();
-                running->setCpuTime(running->getCpuTime() + running->getBurstTime());
+                running->setTotalTaskCpuTime(running->getTotalTaskCpuTime() + running->getBurstTime() + running->getCpuTime());
                 running->setBurstTime(0);
 
                 /* task is finished    */
@@ -61,6 +61,7 @@ void Round_Robin::schedule(List<Tcb> &q, ofstream &outfile) {
             }
         }
     }
-};
+    cout << "\nAverage Wall Time for Round_Robin = " << fixed << static_cast<float> (averageWallTime) / 10.0 << endl;
+}
 
 

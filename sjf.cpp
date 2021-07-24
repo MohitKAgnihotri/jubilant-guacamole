@@ -16,33 +16,10 @@ void SJF::schedule(List<Tcb>& q, ofstream& outfile)
 	{
 		started = true;
 		/* copy main queue to sjf queue */
-		copyQueue(q, tempQueue);
-		ptr = tempIt.First();
-		Tcb* cur = ptr;
-		Tcb* next = ptr;
-		bool unsorted = true;
-		int i = 0;
-		while (unsorted) {
-			unsorted = false;
-			cur = ptr;
-			while (i < 10)
-			{
-				next = tempIt.Next();
-				if (next == NULL || cur == NULL) {
-					break;
-				}
-				if (next->getBurstTime() < cur->getBurstTime())
-				{
-					swap(cur, next);
-					unsorted = true;
-				}
-				i++;
-				cur = next;
-			}
-		}
-		copyQueue(tempQueue, sjfReadyQueue);
+		copyQueue(q, sjfReadyQueue);
 		running = *sjfReadyQueue.Retrieve();
-		ptr = it.First();
+		it.Reset();
+		ptr = it.Next();
 	}
 	if (started == true)
 	{
@@ -51,9 +28,11 @@ void SJF::schedule(List<Tcb>& q, ofstream& outfile)
 		while (ptr)
 		{
 			/* run CPU cycle */
-			running.setCpuTime(running.getCpuTime() - 1);
-			tick++;
-			if (running.getCpuTime() == 0)
+			running.setCpuTime(running.getBurstTime() - 1);
+			running.setTotalTaskCpuTime(running.getBurstTime() + running.getCpuTime());
+			tick += running.getBurstTime();
+			running.setBurstTime(0);
+			if (running.getBurstTime() == 0)
 			{
 				/* task is finished    */
 				/* set turnaround time */
@@ -76,7 +55,7 @@ void SJF::schedule(List<Tcb>& q, ofstream& outfile)
 				/* get the next task from the queue */
 				sjfReadyQueue.Delete(*ptr);
 				/* get the next task */
-				ptr = it.First();
+				ptr = it.Next();
 				if (ptr)
 				{
 					running = *sjfReadyQueue.Retrieve();

@@ -133,22 +133,29 @@ T* List<T>::InsertSorted( T& newitem)
     newNode->next = NULL;
     newNode->data = newitem;
 
-    // insertion at head:
-    if (newNode->data < head->data)
+    if (head == NULL)
+    {
+        head = newNode;
+        return &newitem;
+    }
+    else if (newNode->data < head->data)
     {
         newNode->next = head;
         head = newNode;
         return &newitem;
     }
+    else
+    {
+        // insertion somewhere after the head.
+        Node<T>* insertionPoint = head;
 
-    // insertion somewhere after the head.
-    Node<T>* insertionPoint = head;
-    while (insertionPoint->next && insertionPoint->next->data < newNode->data)
-        insertionPoint = insertionPoint->next;
+        while (insertionPoint->next && insertionPoint->next->data < newNode->data)
+            insertionPoint = insertionPoint->next;
 
-    newNode->next = insertionPoint->next;
-    insertionPoint->next = newNode;
-    return &newitem;
+        newNode->next = insertionPoint->next;
+        insertionPoint->next = newNode;
+        return &newitem;
+    }
 }
 
 template <class T>

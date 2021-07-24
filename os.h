@@ -64,14 +64,15 @@ public:
 
 	OsTask()
 	{
-		srand((unsigned)time(NULL));
+		//srand((unsigned)time(NULL));
+		srand(1);
 		tick = 0;
 		taskNumber = 1;
 		tptr = &tcb;
 
 		done = false;
 
-		generateRandomTasks(10);
+		generateRandomTasks(4);
 		outFile << left;
 		outFile << setw(9) << "taskName" << SPACE;
 		outFile << setw(13) << "taskWallTime" << SPACE;
@@ -131,7 +132,7 @@ public:
 			generateNewTCB(&tcb);
 			tcb.setTaskNumber(taskNumber++);
 			tcb.setTaskName("T" + taskNumber);
-			tempQueueL.InsertAtEnd(tcb);
+			tempQueueL.InsertSorted(tcb);
 		}
 
 	}
@@ -139,7 +140,7 @@ public:
 	{
 		if (fcfs.isDone() == false)
 		{
-			//fcfs.schedule(tempQueueL, outFile);
+			fcfs.schedule(tempQueueL, outFile);
 		}
 		if (roundrobin.isDone() == false)
 		{
@@ -155,7 +156,7 @@ public:
 		}
 		if (sjf.isDone() == false)
 		{
-			//sjf.schedule(tempQueueL, outFile);
+			sjf.schedule(tempQueueL, outFile);
 		}
 		done = true;
 	}

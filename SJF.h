@@ -32,14 +32,14 @@ public:
 	void copyQueue(List<Tcb>& from, List<Tcb>& to)
 	{
 
-		ListIterator <Tcb> ito(from);
-		Tcb* ptr = ito.First();
-		while (ptr)
-		{
+        ListIterator <Tcb> ito(from);
+        Tcb* ptr = ito.Next();
+        while (ptr)
+        {
 
-			to.InsertAtEnd(*ptr);
-			ptr = ito.Next();
-		}
+            to.InsertAtEnd(*ptr);
+            ptr = ito.Next();
+        }
 	}
 };
 

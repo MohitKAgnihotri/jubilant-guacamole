@@ -69,17 +69,17 @@ public:
 
 	bool operator < (Tcb& t)
 	{
-		return (blockedTime < t.blockedTime);
+		return (burstTime < t.burstTime);
 	}
 
 	bool operator >= (Tcb& t)
 	{
-		return (blockedTime >= t.blockedTime);
+		return (burstTime >= t.burstTime);
 	}
 
 	bool operator == (Tcb& t)
 	{
-		return (blockedTime == t.blockedTime);
+		return (burstTime == t.burstTime);
 	}
 
 	void setPriority(unsigned int p) { priority = p; }
