@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sam_320_attachments"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sam_320">
+				<Option output="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/sam_320" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 sam_320"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sam_320/fast">
+				<Option output="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/sam_320" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 sam_320/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/CppTest.cpp">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/PriorityFCFS.cpp">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/fcfs.cpp">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/fcfs.h">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/priority.cpp">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/priority.h">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/round_robin.cpp">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/round_robin.h">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/sjf.cpp">
+			<Option target="sam_320"/>
+		</Unit>
+		<Unit filename="/home/mohitagnihotri/workspace/sam_320-attachments/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

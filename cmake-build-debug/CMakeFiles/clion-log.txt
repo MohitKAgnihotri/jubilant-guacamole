@@ -1,0 +1,4 @@
+/snap/clion/158/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mohitagnihotri/workspace/sam_320-attachments
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mohitagnihotri/workspace/sam_320-attachments/cmake-build-debug

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/sam_320_attachments.dir/main.cpp.o -o sam_320_attachments 

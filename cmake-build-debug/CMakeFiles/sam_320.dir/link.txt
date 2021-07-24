@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/sam_320.dir/CppTest.cpp.o CMakeFiles/sam_320.dir/round_robin.cpp.o CMakeFiles/sam_320.dir/fcfs.cpp.o CMakeFiles/sam_320.dir/priority.cpp.o CMakeFiles/sam_320.dir/PriorityFCFS.cpp.o CMakeFiles/sam_320.dir/sjf.cpp.o -o sam_320 
