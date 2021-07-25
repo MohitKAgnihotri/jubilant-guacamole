@@ -177,21 +177,20 @@ T* List<T>::Delete(T& x)
     }
     else
     {
-        for (ptr = head->next, last = head; ptr != NULL && ptr->data < x; ptr = ptr->next)
+        ptr = head->next;
+        for (ptr = head->next, last = head; ptr != NULL; ptr = ptr->next)
         {
-            last = ptr;
-        }
-
-        if (ptr != NULL && ptr->data == x)
-        {
-            x = ptr->data;
-            last->next = ptr->next;
-            delete ptr;
-            return &x;
-        }
-        else
-        {
-            return NULL;
+            if (ptr->data == x) {
+                last->next = ptr->next;
+                x = ptr->data;
+                delete ptr;
+                return &x;
+            }
+            else
+            {
+                last = ptr;
+                continue;
+            }
         }
     }
     return NULL;

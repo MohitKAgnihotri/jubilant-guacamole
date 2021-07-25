@@ -16,7 +16,7 @@ Tcb* Priority::getTcbWithPriority (List <Tcb> &priorityReadyQueue)
     currentPriority = highestPriority;
     while(currentPriority != NULL)
     {
-        if (highestPriority->getPriority()  < currentPriority->getPriority())
+        if (highestPriority->getPriority()  > currentPriority->getPriority())
         {
             highestPriority = currentPriority;
         }

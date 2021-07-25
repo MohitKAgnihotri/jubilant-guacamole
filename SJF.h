@@ -27,8 +27,8 @@ public:
 	bool isDone() { return (done); }
 	bool isNotDone() { return (!done); }
 	bool isStarted() { return (started); }
-	bool isNotStarted() { return (!started); } 
-
+	bool isNotStarted() { return (!started); }
+    Tcb* getTcbWithShortestCPUTime(List <Tcb> &sjfReadyQueue);
 	void copyQueue(List<Tcb>& from, List<Tcb>& to)
 	{
 

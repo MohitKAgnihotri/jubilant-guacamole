@@ -72,7 +72,7 @@ public:
 
 		done = false;
 
-		generateRandomTasks(4);
+		generateRandomTasks(10);
 		outFile << left;
 		outFile << setw(9) << "taskName" << SPACE;
 		outFile << setw(13) << "taskWallTime" << SPACE;
@@ -132,7 +132,7 @@ public:
 			generateNewTCB(&tcb);
 			tcb.setTaskNumber(taskNumber++);
 			tcb.setTaskName("T" + taskNumber);
-			tempQueueL.InsertSorted(tcb);
+			tempQueueL.InsertAtEnd(tcb);
 		}
 
 	}
@@ -148,11 +148,11 @@ public:
 		}
 		if (priority.isDone() == false)
 		{
-			//priority.schedule(tempQueueL, outFile);
+			priority.schedule(tempQueueL, outFile);
 		}
 		if (priorityfcfs.isDone() == false)
 		{
-			//priorityfcfs.schedule(tempQueueL, outFile);
+			priorityfcfs.schedule(tempQueueL, outFile);
 		}
 		if (sjf.isDone() == false)
 		{
