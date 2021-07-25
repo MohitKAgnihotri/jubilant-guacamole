@@ -64,8 +64,7 @@ public:
 
 	OsTask()
 	{
-		//srand((unsigned)time(NULL));
-		srand(1);
+		srand((unsigned)time(NULL));
 		tick = 0;
 		taskNumber = 1;
 		tptr = &tcb;
