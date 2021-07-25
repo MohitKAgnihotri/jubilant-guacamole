@@ -9,16 +9,16 @@ using namespace std;
 void Round_Robin::schedule(List<Tcb> &q, ofstream &outfile) {
     int quantum = 10;
     Tcb *running;
-    List<Tcb> fcfsReadyQueue;
-    ListIterator<Tcb> it(fcfsReadyQueue);
+    List<Tcb> rr_queue;
+    ListIterator<Tcb> it(rr_queue);
     Tcb *ptr = NULL;
 
     if (!started) {
         started = true;
-        copyQueue(q, fcfsReadyQueue);
+        copyQueue(q, rr_queue);
     }
 
-    while (!fcfsReadyQueue.isEmpty()) {
+    while (!rr_queue.isEmpty()) {
         it.Reset();
         running = it.Next();
 
@@ -56,7 +56,7 @@ void Round_Robin::schedule(List<Tcb> &q, ofstream &outfile) {
                         << (static_cast <float>(running->getTotalTaskCpuTime()) / running->getTaskWallTime()) * 100.0f
                         << setw(3) << tick << endl;
 
-                fcfsReadyQueue.Delete(*running);
+                rr_queue.Delete(*running);
                 running = it.Next();
             }
         }

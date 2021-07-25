@@ -92,7 +92,7 @@ public:
 
 		temp = ((rand()) % (MAX_CPU_TIME - MIN_CPU_TIME)) + MIN_CPU_TIME;
 		t->setCpuTime(temp);
-		t->setTotalTaskCpuTime(temp);
+		t->setTotalTaskCpuTime(0);
 		temp = ((rand()) % (MAX_PRIORITY - MIN_PRIORITY)) + MIN_PRIORITY;
 		t->setPriority(temp);
 
