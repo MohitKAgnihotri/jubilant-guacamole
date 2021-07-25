@@ -1,0 +1,2 @@
+# jubilant-guacamole
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/76430329901549268a51f474785e64f6)](https://app.codacy.com/gh/MohitKAgnihotri/jubilant-guacamole?utm_source=github.com&utm_medium=referral&utm_content=MohitKAgnihotri/jubilant-guacamole&utm_campaign=Badge_Grade_Settings)
